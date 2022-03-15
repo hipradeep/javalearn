@@ -11,8 +11,7 @@ public class LinearSearch {
         findElements(arr, 14);
         findIndexOfElementsFromStart(arr, 14);
         findIndexOfElementsFromEnd(arr, 14);
-
-        System.out.println(returnElements(arr, 14, 0, new ArrayList<>()));
+        returnElementsFromArray(arr, 14);
 
     }
 
@@ -33,6 +32,9 @@ public class LinearSearch {
 
         System.out.println(e + " is present in array at " + findIndexFromEnd(arr, e, arr.length - 1) + " from end");
 
+    }
+    private static void returnElementsFromArray(int[] arr, int e){
+        System.out.println(returnElements(arr, e, 0, new ArrayList<>()));
     }
 
     private static boolean isElementPresentInArray(int[] arr, int e, int i) {
@@ -76,7 +78,6 @@ public class LinearSearch {
         if (arr[i] == e) {
             list.add(e);
         }
-        System.out.println(arr[i]);
         return returnElements(arr, e, i + 1, list);
     }
 }
