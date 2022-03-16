@@ -6,7 +6,7 @@ public class LinearSearch {
     // Find the elements is Array
     public static void main(String[] args) {
 
-        int arr[] = {1, 20, 14, 5, 12,14, 45, 7};
+        int[] arr = {1, 20, 14, 5, 12,14, 45, 7};
 
         findElements(arr, 14);
         findIndexOfElementsFromStart(arr, 14);
