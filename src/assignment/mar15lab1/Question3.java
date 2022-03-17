@@ -1,4 +1,4 @@
-package assignment;
+package assignment.mar15lab1;
 
 import java.util.Scanner;
 

@@ -3,19 +3,28 @@ package recursion.patterns;
 public class Patterns {
     public static void main(String[] args) {
 
-        triangle(10, 0);
+        triangleUpward(4, 0);
     }
 
-
-
-    static void triangle(int col, int row){
-        if (col==0) return;
-        if(row < col){
+    static void triangleDownward(int row, int col){
+        if (row < 0) return;
+        if(col < row){
             System.out.print(" *");
-            triangle(col, row+1);
+            triangleDownward(row, col+1);
         }else {
-            System.out.println("\n");
-            triangle(col-1, 0);
+            System.out.println("");
+            triangleDownward(row-1, 0);
+        }
+    }
+    static void triangleUpward(int row, int col){
+        if (row < 0) return;
+
+        if(col < row){
+            triangleUpward(row, col+1);
+            System.out.print(" *");
+        }else {
+            triangleUpward(row-1, 0);
+            System.out.println("");
         }
     }
 
