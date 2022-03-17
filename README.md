@@ -1,2 +1,2 @@
 # javalearn
-## Open src folder for code
+### Open 'src' folder for code
