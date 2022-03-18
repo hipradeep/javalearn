@@ -37,15 +37,6 @@ public class SelectionSort {
 
     }
 
-
-    //swap elements
-    private static void swap(int[] arr, int j) {
-        int temp = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = temp;
-    }
-
-
     //print array
     static void printArr(int[] array) {
         for (int a : array) {
