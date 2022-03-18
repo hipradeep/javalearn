@@ -12,7 +12,7 @@ public class SelectionSort {
         //int[] arr={1};
 
         int n = arr.length;
-        selectionSort(arr, n);
+        selectionSort2(arr, n);
     }
 
 
@@ -31,10 +31,31 @@ public class SelectionSort {
         printArr(arr);
 
         /*
-        * first find the min element index then replace it with first loop initial value
-        * second loop help us find the 'min' index
-        * after find the min index then swap elements*/
+         * first find the min element index then replace it with first loop initial value
+         * second loop help us find the 'min' index
+         * after find the min index then swap elements
+         * */
+    }
 
+    private static void selectionSort2(int[] arr, int n) {
+        printArr(arr);
+        for (int i=0; i < n; i++) {
+            int last =n-i-1; //imp
+            int max=0;
+            for (int j = 0; j <=last; j++) {
+                if (arr[max] < arr[j])
+                    max = j;
+            }
+            int temp = arr[max];
+            arr[max] = arr[last];
+            arr[last] = temp;
+        }
+        printArr(arr);
+        /*
+         * first find the max element index then replace it with Last loop initial value
+         * second loop help us find the 'Max' index
+         * after find the Max index then swap elements
+         * */
     }
 
     //print array
