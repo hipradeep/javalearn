@@ -19,7 +19,7 @@ public class BubbleSort {
     private static void bubbleSortOpt(int[] arr, int n) {
         printArr(arr);
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n - 1 - i; j++) {
+            for (int j = 0; j < n - 1 - i; j++) {  //exclude that elements that reach already at end
                 if (arr[j] > arr[j + 1]) {
                     swap(arr, j);
                 }

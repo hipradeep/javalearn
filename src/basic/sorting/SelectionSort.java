@@ -44,7 +44,7 @@ public class SelectionSort {
     private static void selectionSort2(int[] arr, int n) {
 
         for (int i=0; i < n; i++) {
-            int last =n-i-1; //imp
+            int last =n-1-i; //imp
             int max=0;
             for (int j = 0; j <=last; j++) { // start from start
                 if (arr[max] < arr[j])
