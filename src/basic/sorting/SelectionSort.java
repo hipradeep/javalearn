@@ -1,5 +1,8 @@
 package basic.sorting;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class SelectionSort {
 
     //put the right element at right position
@@ -11,13 +14,14 @@ public class SelectionSort {
         // int[] arr={1, 2, 3, 4, 5};
         //int[] arr={1};
 
+        System.out.println(Arrays.toString(arr));
         int n = arr.length;
         selectionSort2(arr, n);
     }
 
 
     private static void selectionSort(int[] arr, int n) {
-        printArr(arr);
+
         for (int i = 0; i < n; i++) {
             int min = i;
             for (int j = i + 1; j < n - 1; j++) {
@@ -28,7 +32,7 @@ public class SelectionSort {
             arr[min] = arr[i];
             arr[i] = temp;
         }
-        printArr(arr);
+        System.out.println(Arrays.toString(arr));
 
         /*
          * first find the min element index then replace it with first loop initial value
@@ -38,11 +42,11 @@ public class SelectionSort {
     }
 
     private static void selectionSort2(int[] arr, int n) {
-        printArr(arr);
+
         for (int i=0; i < n; i++) {
             int last =n-i-1; //imp
             int max=0;
-            for (int j = 0; j <=last; j++) {
+            for (int j = 0; j <=last; j++) { // start from start
                 if (arr[max] < arr[j])
                     max = j;
             }
@@ -50,7 +54,7 @@ public class SelectionSort {
             arr[max] = arr[last];
             arr[last] = temp;
         }
-        printArr(arr);
+        System.out.println(Arrays.toString(arr));
         /*
          * first find the max element index then replace it with Last loop initial value
          * second loop help us find the 'Max' index
@@ -74,6 +78,6 @@ public class SelectionSort {
 
                  Best               Average                Worst
 
-                  Ω(n^2)              θ(n^2)                  θ(n^2)
+                 Ω(n^2)              θ(n^2)                  θ(n^2)
 
  */
