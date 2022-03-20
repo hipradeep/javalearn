@@ -1,4 +1,4 @@
-package recursion.sorting;
+package dsanotes.recursion.sorting;
 
 import java.util.Arrays;
 

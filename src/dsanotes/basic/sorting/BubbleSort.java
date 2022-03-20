@@ -1,4 +1,4 @@
-package basic.sorting;
+package dsanotes.basic.sorting;
 
 public class BubbleSort {
 

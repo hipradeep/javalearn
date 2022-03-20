@@ -1,6 +1,5 @@
-package basic.sorting;
+package dsanotes.basic.sorting;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class SelectionSort {

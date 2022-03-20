@@ -1,4 +1,4 @@
-package recursion;
+package dsanotes.recursion;
 
 class RecursionLevel1 {
     static int sum = 0;

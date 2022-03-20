@@ -1,4 +1,4 @@
-package recursion.array;
+package dsanotes.recursion.array;
 
 import java.util.ArrayList;
 

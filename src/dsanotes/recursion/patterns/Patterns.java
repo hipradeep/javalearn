@@ -1,4 +1,4 @@
-package recursion.patterns;
+package dsanotes.recursion.patterns;
 
 public class Patterns {
     public static void main(String[] args) {

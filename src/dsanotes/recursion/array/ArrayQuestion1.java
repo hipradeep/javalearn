@@ -1,4 +1,4 @@
-package recursion.array;
+package dsanotes.recursion.array;
 
 public class ArrayQuestion1 {
          // Checking the array shorted or not
