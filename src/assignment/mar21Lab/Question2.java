@@ -9,9 +9,17 @@ public class Question2 {
     }
 
     void greater(int a, int b) {
-        System.out.println("Greater a- " +a+" b- "+ b );
+        if(a>b)
+            System.out.println("Greater is : " +a);
+        else
+            System.out.println("Greater is : " +b);
     }
     void greater(int a, int b, int c) {
-        System.out.println("Greater a- " +a+" b- "+ b +" c- "+c);
+        if(a>b && a>c)
+            System.out.println("Greater is : " +a);
+        if(b>a && b>c)
+            System.out.println("Greater is : " +b);
+        if(c>a && c>b)
+            System.out.println("Greater is : " +c);
     }
 }

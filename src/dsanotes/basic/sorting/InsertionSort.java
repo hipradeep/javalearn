@@ -73,3 +73,13 @@ public class InsertionSort {
         arr[second]=temp;
     }
 }
+
+/*
+------------------------------------------------------------------------------------------------
+        #Time complexity
+
+                 Best               Average                Worst
+
+                 Ω(n^2)              θ(n^2)                  θ(n^2)
+
+ */

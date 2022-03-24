@@ -14,6 +14,7 @@ public class Question1 {
         System.out.println("Enter 3 for Greater");
         System.out.println("Enter 0 for Exit");
         Scanner sc = new Scanner(System.in);
+            System.out.println("Enter choice : ");
         int choice = sc.nextInt();
             switch (choice) {
                 case 1 : {
@@ -53,14 +54,19 @@ public class Question1 {
 class CubeSquare {
 
     void cube(int a) {
-        System.out.println("Cube a "+a);
+        System.out.println("Cube of "+a+ " is : "+ a*a*a);
     }
 
     void square(int b) {
-        System.out.println("Square b "+b);
+        System.out.println("Square of "+b+ " is : "+ b*b);
     }
 
     void greater(int a, int b, int c) {
-        System.out.println("Greater a- " +a+" b- "+ b +" c- "+c);
+        if(a>b && a>c)
+        System.out.println("Greater is : " +a);
+        if(b>a && b>c)
+        System.out.println("Greater is : " +b);
+        if(c>a && c>b)
+        System.out.println("Greater is : " +c);
     }
 }
