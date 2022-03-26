@@ -19,7 +19,6 @@ public class Q3SumOfDigitsInString {
             if (Character.isDigit(str.charAt(i)))
                 sum=sum+ Character.getNumericValue(str.charAt(i));
         }
-
         System.out.println("Sum of digits in string :"+sum);
 
     }

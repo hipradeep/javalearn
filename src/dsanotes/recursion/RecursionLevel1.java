@@ -6,12 +6,13 @@ class RecursionLevel1 {
 
     public static void main(String[] args) {
 
-        System.out.println(countTheSpteps(41));
+        //System.out.println(countTheSteps(41));
+        System.out.println( rev3(12000));
 
     }
 
-    // System.out.println(countTheSpteps(41));
-    static int countTheSpteps(int n) {
+    // System.out.println(countTheSteps(41));
+    static int countTheSteps(int n) {
         // count the steps to reduse value to 0
         return countStepHelper(n, 0);
     }
@@ -55,9 +56,9 @@ class RecursionLevel1 {
         countNumbers1(n / 10);
     }
 
-    // System.out.println( isPalindrom(11211));
-    static boolean isPalindrom(int n) {
-        // chacking number is palindrom or not
+    // System.out.println( isPalindrome(11211));
+    static boolean isPalindrome(int n) {
+        // checking number is palindrome or not
         return n == rev3(n);
     }
 
@@ -65,17 +66,17 @@ class RecursionLevel1 {
     static int rev3(int n) {
         // revers number
         int d = (int) Math.log10(n) + 1;
-        return hepler(n, d);
+        return helper(n, d);
     }
 
-    static int hepler(int n, int digits) {
+    static int helper(int n, int digits) {
         if (n % 10 == n)
             return n;
         int rem = n % 10;
-        return (int) (rem * Math.pow(10, digits - 1) + hepler(n / 10, digits - 1));
+        return (int) (rem * Math.pow(10, digits - 1) + helper(n / 10, digits - 1));
     }
 
-    // rev2(1234);
+    // rev2(1234); // if we check 1200 it gives- 21
     // System.out.println(sum); -> 4321
     static void rev2(int n) {
         // revers number using third variable, sum
@@ -87,12 +88,12 @@ class RecursionLevel1 {
 
     // rev1(1234) --> 4 3 2 1
     static void rev1(int n) {
-        // print digis from end to start, print single single digits
+        // print digits from end to start, print single digits
         if (n % 10 == n) {
-            System.out.print(" " + n);
+            System.out.print(n);
             return;
         }
-        System.out.println(n % 10);
+        System.out.print(n % 10);
         rev1(n / 10);
     }
 

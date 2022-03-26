@@ -4,40 +4,73 @@ public class Mar24Class2 {
 
     public static void main(String[] args) {
 
-        pattern7();
+        pattern8();
 
     }
 
-    static void pattern7() {
-
+    static void pattern8() {
         /*
 
-         A
-         B A
-         C B A
-         D C B A
-         E D C B A
-         F E D C B A
+         ABCDEEDCBA
+         ABCD  DCBA
+         ABC    CBA
+         AB      BA
+         A        A
 
         * */
-
         char a = 'A';
-        int row=9;
-        for (int i = 0; i <=5; i++) {
-
-            for (int j = 0; j <=(row/2) - i; j++) {
-                System.out.print(a++);
+        int row = 5;
+        int k, s = 0;
+        for (int i = 0; i < row; i++) {
+            k = 0;
+            for (; k < row - i; k++) {
+                System.out.print(a );
+                a= (char) (a+1);
             }
-            for (int j = 0; j < i+2; j++) {
-                System.out.print("_");
+            for (int j = 0; j < s; j++) {
+                System.out.print(" ");
             }
-            for (int j = 0; j <=(row/2) -i; j++) {
-                System.out.print(--a);
+            for (; k >0; k--) {
+                a= (char) (a-1);
+                System.out.print(a);
             }
+            s+=2;
             System.out.println();
         }
 
     }
+    static void pattern7() {
+        /*
+
+         ABCDEEDCBA
+         ABCD  DCBA
+         ABC    CBA
+         AB      BA
+         A        A
+
+        * */
+        char a = 'A';
+        int row = 5;
+        int k, s = 0;
+        for (int i = 0; i < row; i++) {
+            k = 0;
+            for (; k < row - i; k++) {
+                System.out.print(a );
+                a= (char) (a+1);
+            }
+            for (int j = 0; j < s; j++) {
+                System.out.print(" ");
+            }
+            for (; k >0; k--) {
+                a= (char) (a-1);
+                System.out.print(a);
+            }
+            s+=2;
+            System.out.println();
+        }
+
+    }
+
     static void pattern6() {
 
         /*
@@ -52,7 +85,7 @@ public class Mar24Class2 {
         * */
 
         char a = 'E';
-        for (int i = 0; i <5; i++) {
+        for (int i = 0; i < 5; i++) {
             a = (char) ('E' - 5 + i);
             for (int j = 0; j <= 5 - i; j++) {
                 System.out.print(" " + (a--));
