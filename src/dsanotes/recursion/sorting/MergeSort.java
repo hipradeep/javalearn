@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class MergeSort {
     public static void main(String[] args) {
-        int[] arr = {10, -12, 2};
+        int[] arr = {10, -12};
         int n = arr.length;
 
         mergeSort(arr, 0, n - 1);
@@ -34,7 +34,8 @@ public class MergeSort {
         }
         int i = 0, j = 0, k = s;
         while (i < l1 && j < l2) {
-            if (arr1[i] < arr2[j]) arr[k++] = arr1[i++];
+            if (arr1[i] < arr2[j])
+                arr[k++] = arr1[i++];
             else arr[k++] = arr2[j++];
         }
         for (; i < l1; i++)
