@@ -40,11 +40,9 @@ public class PeakElement {
     private static void peakElement1(int[] a, int n) {
         //O(n)
         for (int i = 0; i < n; i++) {
-
             if ((i == 0 || a[i] > a[i - 1]) && (i == n - 1 || a[i] > a[i + 1])) {
-                System.out.println("s " + a[i]);
+                System.out.println(a[i]);
             }
-
         }
     }
 }
