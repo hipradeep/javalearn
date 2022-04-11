@@ -62,10 +62,24 @@ class BinarySearch {
     // rule array should be sorted order
     //fallow divide and conquer
     public static void main(String[] args) {
-        int a[] = {10, 20, 22, 23, 45, 66};
-        int num = 66;
+        int n;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number of elements: ");
+        n = sc.nextInt();
+        int[] a = new int[n];
+        System.out.println("Enter the elements: ");
+        for (int i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+        }
+        System.out.println("Elements are: ");
+        for (int i = 0; i < n; i++) {
+            //System.out.print(array[i] + "\t");
+            System.out.println(a[i]);
+        }
+        System.out.println("Enter element to be search : ");
+        int num =sc.nextInt();
 
-        int aa = Arrays.binarySearch(a, num);
+
         int start = 0, end = a.length - 1, mid = (start + end) / 2;
 
         while (start <= end) {
@@ -92,8 +106,23 @@ class BinarySearch {
 class LinearSearch {
 
     public static void main(String[] args) {
-        int a[] = {10, 20, 22, 23, 45, 66};
-        int num = 3;
+
+        int n;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number of elements: ");
+        n = sc.nextInt();
+        int[] a = new int[n];
+        System.out.println("Enter the elements: ");
+        for (int i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+        }
+        System.out.println("Elements are: ");
+        for (int i = 0; i < n; i++) {
+            //System.out.print(array[i] + "\t");
+            System.out.println(a[i]);
+        }
+        System.out.println("Enter element to be search : ");
+        int num =sc.nextInt();
 
         int flag = 0;
         for (int i = 0; i < a.length; i++) {
@@ -124,3 +153,4 @@ class BubbleSort {
         System.out.println(Arrays.toString(a));
     }
 }
+

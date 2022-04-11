@@ -13,8 +13,9 @@ public class PeakElement {
 
     }
 
+    //using binary search
     private static int peakElement3(int[] arr, int l, int h, int n) {
-        int mid = l + (h - l) / 2;
+        int mid = l + (h - l) / 2;  //mid =(l+h)/2; both are give same result
 
         if ((mid == 0 || arr[mid - 1] <= arr[mid]) && (mid == n - 1 || arr[mid + 1] <= arr[mid])) {
             return mid;
@@ -45,4 +46,7 @@ public class PeakElement {
             }
         }
     }
+
+
+
 }
