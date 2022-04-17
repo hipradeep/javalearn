@@ -1,6 +1,6 @@
 package dacclass.apr6.inheritanceexample;
 //base class| parent |super
-public class Person {
+public class Personn {
 
 	String name;
 	int age;

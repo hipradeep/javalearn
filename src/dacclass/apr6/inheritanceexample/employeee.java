@@ -1,6 +1,6 @@
 package dacclass.apr6.inheritanceexample;
 //child class|derived class| sub class 
-public class employee extends Person {
+public class employeee extends Personn {
 
 	//java support only single inheritance |multilevel 
 	//java does not support multiple inheritance 
@@ -21,7 +21,7 @@ public class employee extends Person {
 		}
 	 
 	public static void main(String[] args) {
-		employee e= new employee();
+		employeee e= new employeee();
 		e.getdata();
 		e.display();
 	}
