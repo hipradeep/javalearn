@@ -20,29 +20,34 @@ public class PrintMatrixInSpiralOrder {
 
     private static void printInSpiralOrder(int[][] mat) {
 
-        int top = 0, bottom = mat.length, left = 0, right = mat[0].length;
+        int top = 0, bottom = mat.length-1, left = 0, right = mat[0].length-1;
 
-        while (true) {
+        int total =mat.length * mat[0].length;
+        int count=0;
 
-            if (left > right) break;
 
-            for (int i = top; i < right; i++) {
-                System.out.print(mat[top][i] + " ");
+        while (count< total) {
+
+
+            for (int i = top,j=right;  j <= right && count < total; j++) {
+                System.out.print(mat[i][j] + " ");
+                count++;
             }
             top += 1;
-            if(top>bottom) break;
 
-            for (int i = top; i < bottom; i++) {
-                System.out.print(mat[i][right - 1] + " ");
+
+            for (int i = top, j= right; i <= bottom && count< total; i++) {
+                System.out.print(mat[i][j] + " ");
+                count++;
             }
             right -= 1;
-            if (left > right) break;
+
 
             for (int i = right ; i >= bottom-1; i--) {
                 System.out.print(mat[bottom - 1][i] + " ");
             }
             bottom -= 1;
-            if(top>bottom) break;
+
             for (int i = bottom - 1; i >= top; i--) {
                 System.out.print(mat[i][left] + " ");
             }
