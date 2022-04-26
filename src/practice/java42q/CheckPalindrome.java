@@ -9,7 +9,7 @@ public class CheckPalindrome {
         String str1;
 
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter a String : ");
+        System.out.print("Enter a String : ");  // a b c c a
         str1 = sc.nextLine();
         checkPalindrome2(str1);  // using two pointer
     }
@@ -17,12 +17,14 @@ public class CheckPalindrome {
         int s = str.length(), i, j, flag = 0;
 
         for (i = 0, j = s - 1; i < s / 2; i++, j--) {
+
             if (str.charAt(i) != str.charAt(j)) {
                 System.out.println("Not Palindrome");
                 flag = 1;
                 break;
             }
         }
+
         if (flag == 0) System.out.println("Palindrome");
 
     }

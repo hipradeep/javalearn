@@ -1,17 +1,19 @@
 package practice.java42q;
 
+//import dacclass.apr12.Hello;
+
 public class AccessSpecifiers {
     //8. Write a JAVA program which illustrates the concept of accessspecifiers.
     public static void main(String[] args) {
-        SumClass sumClass=new SumClass(5, 6);
-      //  sumClass.a=6; // not accessible due to private member of Class SumClass, only accessible within SumClass
-        sumClass.sum(); // accessible due to public method of Class SumClass
-        sumClass.x=9;
+//        SumClass sumClass=new SumClass(5, 6);
+//       // sumClass.a=6; // not accessible due to private member of Class SumClass, only accessible within SumClass
+//        sumClass.sum(); // accessible due to public method of Class SumClass
+//        sumClass.x=9;
 
-//        Hello hello=new Hello();
-//        int protected_var = hello.PROTECTED_VAR;  // showing error, not accessible due to protected member of Class Hello(outside practice package)
-//        System.out.println(protected_var);
-//        hello.protectedMethod(); //
+        Hello hello=new Hello();
+        int protected_var = hello.PROTECTED_VAR;  // showing error, not accessible due to protected member of Class Hello(outside practice package)
+        System.out.println(protected_var);
+        hello.protectedMethod(); //
 
     }
 

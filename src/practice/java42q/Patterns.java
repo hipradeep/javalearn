@@ -14,14 +14,11 @@ public class Patterns {
     //  ****
     //c.Inverted Pyramid
     //  *******
-    //  *****
-    //  ***
-    //  *
+    //   *****
+    //    ***
+    //     *
 
     public static void main(String[] args) {
-
-
-
         a_pattern();
         b_pattern();
         c_pattern();
@@ -53,8 +50,11 @@ public class Patterns {
 
     private static void a_pattern() {
         System.out.println("Pattern A");
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 4; j++) {
+
+        for (int i = 0; i < 4; i++) { //row
+
+            for (int j = 0; j < 4; j++) { //col
+
                 System.out.print(" *");
             }
             System.out.println();

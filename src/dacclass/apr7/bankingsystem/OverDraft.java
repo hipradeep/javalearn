@@ -2,7 +2,10 @@ package dacclass.apr7.bankingsystem;
 
 import java.util.Scanner;
 
-public class OverDraft extends Bank{
+public class OverDraft  extends Bank {
+
+
+
 
     String pan;
     final int minAmount=1000;

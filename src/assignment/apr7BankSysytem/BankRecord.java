@@ -2,6 +2,7 @@ package assignment.apr7BankSysytem;
 
 
 public class BankRecord {
+
   public static void main(String[] args) {
     Bank bank = new Bank();
     bank.input();
