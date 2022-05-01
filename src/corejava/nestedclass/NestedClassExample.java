@@ -19,7 +19,7 @@ public class NestedClassExample {
 
     public static void main(String[] args) {
         //NestedClassExample nestedClassExample = new NestedClassExample();
-        NestedClassExample.InnerClass innerClass=  new NestedClassExample().new InnerClass();
+        NestedClassExample.InnerClass innerClass = new NestedClassExample().new InnerClass();
         innerClass.innerClassMethod();
 
         //nested static inner class
@@ -45,7 +45,6 @@ class Alpha{
                 System.out.println("printX");
             }
         }
-
         new Beta().printX();
     }
 

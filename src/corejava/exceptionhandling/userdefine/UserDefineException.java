@@ -2,41 +2,37 @@ package corejava.exceptionhandling.userdefine;
 
 public class UserDefineException {
 
-
     public static void main(String[] args) {
 
         try{
-
-            int x=3+4; throw new Example(); // checked,
-
+            int x=3+4; throw new ExceptionClass(); // checked,
 
         }catch (Exception e){
-            System.out.println("from catch");
+
+            System.out.println(e.getMessage());
+
         }finally {
 
             try{
-                int i=3+4; throw new Example1();  //run time, unchecked
-
+                int i=3+4; throw new ExceptionClass2();  //run time, unchecked
             }catch (Exception e){
-                System.out.println("from catch1");
+                System.out.println(e.getMessage());
             }
-
         }
     }
 }
 
 
-class Example extends Exception{
+class ExceptionClass extends Exception{
 
-    public Example() {
-        System.out.println("User define Exception");
+    public ExceptionClass() {
+        super("User define Exception");
     }
 }
 
-class Example1 extends RuntimeException{
+class ExceptionClass2 extends RuntimeException{
 
-    public Example1() {
-        System.out.println("User define RuntimeException");
+    public ExceptionClass2() {
+        super("User define RuntimeException");
     }
-
 }
