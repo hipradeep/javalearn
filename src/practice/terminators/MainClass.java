@@ -1,4 +1,4 @@
-package practice.test;
+package practice.terminators;
 
 import java.util.Collections;
 import java.util.Set;

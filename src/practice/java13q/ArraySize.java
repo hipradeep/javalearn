@@ -17,7 +17,6 @@ public class ArraySize {
             System.out.println(e.getMessage());
         }
 
-
     }
 }
 class ArraySizeException extends Exception{

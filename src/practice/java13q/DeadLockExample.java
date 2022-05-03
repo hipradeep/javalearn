@@ -26,6 +26,7 @@ public class DeadLockExample {
         }
     }
     private static class ThreadDemo2 extends Thread {
+
         public void run() {
             synchronized (Lock2) {
                 System.out.println("Thread 2: Holding lock 2...");

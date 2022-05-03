@@ -1,12 +1,12 @@
-package practice.test;
+package practice.terminators;
 
-public class Student2 implements Comparable<Student2>{
+public class Student3 implements Comparable<Student3>{
 
     String name;
     int age;
     float cgpa;
 
-    public Student2(String name, int age, float cgpa) {
+    public Student3(String name, int age, float cgpa) {
         this.name = name;
         this.age = age;
         this.cgpa = cgpa;
@@ -37,8 +37,8 @@ public class Student2 implements Comparable<Student2>{
     }
 
     @Override
-    public int compareTo(Student2 student) {
-        return Integer.compare(this.getAge(), student.getAge());
+    public int compareTo(Student3 student) {
+        return Double.compare(this.getCgpa(), student.getCgpa());
     }
 
 

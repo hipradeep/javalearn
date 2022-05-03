@@ -11,10 +11,10 @@ public class Pradeep {
 //        List<Double> liset=new LinkedList<>();
 //        System.out.println(list.getClass());
 //        System.out.println(liset.getClass());
-        String str="";
+        StringBuilder str= new StringBuilder();
 
         for (char i = 'a'; i <='d' ; i++) {
-            str+=(char)(i+1);
+            str.append((char) (i + 1));
         }
         System.out.println(str);
     }
