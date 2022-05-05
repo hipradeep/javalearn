@@ -1,11 +1,10 @@
 package advjava._7inputoutputstream;
 
 import java.io.*;
+import java.util.Scanner;
 
 public class IOFileTex {
-
-
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, FileNotFoundException {
         FileInputStream inputStream = null;
         FileOutputStream outputStream = null;
 
@@ -15,6 +14,9 @@ public class IOFileTex {
 
             int content;
             while ((content = inputStream.read()) != -1) {
+                //print in console
+                System.out.print((byte) content);
+                //write in Destination file
                 outputStream.write((byte) content);
             }
         } catch (Exception ignored) {
@@ -30,21 +32,22 @@ class CharacterStreamClass {
     public static void main(String[] args) throws IOException {
         FileReader reader=null;
         FileWriter writer=null;
-        int countVowels = 0;
-        int countConsonants = 0;
 
         try {
-            reader=new FileReader("C:\\Users\\prade\\IdeaProjects\\javalearn\\src\\advjava\\_7inputoutputstream\\source.txt");
+
+            String path="C:\\Users\\prade\\IdeaProjects\\javalearn\\src\\advjava\\_7inputoutputstream\\";
+            String fileName="source.txt"; // we can also entre file name using Scanner
+            Scanner sc=new Scanner(System.in);
+            System.out.print("Enter file name : ");
+            String fileName1=sc.next();
+            reader=new FileReader(path+fileName1);
             writer=new FileWriter("C:\\Users\\prade\\IdeaProjects\\javalearn\\src\\advjava\\_7inputoutputstream\\result.txt");
 
             int content;
             while ((content = reader.read()) != -1) {
-                char c=(char) content;
-                if (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U')
-                    countVowels += 1;
-                else countConsonants += 1;
-
-
+                //print in console
+                System.out.print((char) content);
+                //write in Destination file
                 writer.append((char) content);
             }
 
@@ -53,8 +56,7 @@ class CharacterStreamClass {
             if (writer !=null) writer.close();
         }
 
-        System.out.println("Vowels : " + countVowels);
-        System.out.println("Consonants : " + countConsonants);
+
     }
 
 }

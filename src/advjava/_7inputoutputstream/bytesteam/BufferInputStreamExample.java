@@ -3,7 +3,7 @@ package advjava._7inputoutputstream.bytesteam;
 import java.io.BufferedInputStream;
 import java.io.IOException;
 
-public class BufferInputSteamExample {
+public class BufferInputStreamExample {
     public static void main(String[] args) throws IOException {
 
         BufferedInputStream read=new BufferedInputStream(System.in);
