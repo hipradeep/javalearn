@@ -18,11 +18,15 @@ public class StoreFileDataUsingCharArray {
 
             File file = new File(path + args[0]);
 
+
+            //container
             char[] chars = new char[(int) file.length()];
 
             fileReader.read(chars);
            // fileWriter.write(chars);
 
+            //fileWriter.write(chars);
+            //or
             for (char c : chars) {
                 fileWriter.write(c);
                 System.out.print(c);

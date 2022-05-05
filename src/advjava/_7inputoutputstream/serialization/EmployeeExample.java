@@ -3,9 +3,12 @@ package advjava._7inputoutputstream.serialization;
 import java.io.*;
 import java.util.Scanner;
 
-public class Q1EmployeeExample {
+public class EmployeeExample {
 
     public static void main(String[] args) throws IOException {
+        String path = "C:\\Users\\prade\\IdeaProjects\\javalearn\\src\\advjava\\_7inputoutputstream\\";
+        String fileName = "employee.txt";
+        String fileName2 = "employee.dat";
         Employee employee=new Employee();
 
         employee.input();
@@ -13,16 +16,16 @@ public class Q1EmployeeExample {
 
         //write this data in employee.dat file
         try{
-            FileOutputStream fileOutputStream= new FileOutputStream("employee.dat");
+            FileOutputStream fileOutputStream= new FileOutputStream(path + fileName);
             ObjectOutputStream oi= new ObjectOutputStream(fileOutputStream);
 
             oi.writeObject(employee);
 
             oi.close();
 
-
             //reading data from employee.dat
-            ObjectInputStream k= new ObjectInputStream(new FileInputStream("employee.dat"));
+            FileInputStream fileInputStream = new FileInputStream(path + fileName);
+            ObjectInputStream k= new ObjectInputStream(fileInputStream);
 
             Employee emp=(Employee) k.readObject();
             emp.displayDetails();

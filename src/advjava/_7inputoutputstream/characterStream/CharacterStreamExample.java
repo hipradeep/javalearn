@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class CharacterStreamExample {
+    //Read from file and store in array
+
     public static void main(String[] args) throws IOException {
         FileReader reader = null;
         FileWriter writer = null;
