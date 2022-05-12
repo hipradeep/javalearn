@@ -56,7 +56,6 @@ class CharacterStreamClass {
             if (writer !=null) writer.close();
         }
 
-
     }
 
 }

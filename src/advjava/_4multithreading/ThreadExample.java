@@ -19,8 +19,16 @@ public class ThreadExample {
             t.start();
             Thread t2=new Thread(new Thread2());
             t2.start();
-        }
+            t2.setPriority(5);
 
+            Thread t4=new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    System.out.println("4 running");
+                }
+            }, "Third thread");
+            t4.start();
+        }
     }
 }
 
