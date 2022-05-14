@@ -10,7 +10,7 @@ public class ListCollectionExamples {
     public static void main(String[] args) {
 
         exampleArrayList();
-        exampleLinkedList();
+       // exampleLinkedList();
         //exampleVector();
       //  exampleStack();
 
@@ -62,6 +62,8 @@ public class ListCollectionExamples {
         al.add("pradeep");
         al.add("pradeep");
         al.add("shyam");
+        al.set(1, "pradeep");
+        al.set(0, "pradeep1");
        // al.remove(1);
 
         System.out.println(al);
