@@ -62,5 +62,4 @@ class ReadText2 implements Runnable {
         }catch (Exception e){}
     }
 
-
 }
