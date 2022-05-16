@@ -14,6 +14,7 @@ public class LinkedListExample {
         ll.add("maurya");
         ll.add("shyam");
         ll.add(null);
+        ll.offer("key");
         ll.set(1, "pradeep"); //rock will replace by pradeep
         ll.push("hero"); //at the beginning
 

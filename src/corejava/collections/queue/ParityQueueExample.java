@@ -4,16 +4,23 @@ import java.util.PriorityQueue;
 
 public class ParityQueueExample {
     public static void main(String[] args) {
-        // Creating a priority queue
-        PriorityQueue<Integer> numbers = new PriorityQueue<>();
 
-        // Using the add() method
-        numbers.add(4);
-        numbers.add(2);
-        System.out.println("PriorityQueue: " + numbers);
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
 
-        // Using the offer() method
-        numbers.offer(1);
-        System.out.println("Updated PriorityQueue: " + numbers);
+        pq.add(4);
+        pq.add(2);
+        // numbers.add(null); //compile-time error
+        System.out.println(pq);
+
+        pq.offer(1);
+        pq.offer(3);
+        System.out.println(pq);
+        System.out.println("head : " + pq.element());
+        System.out.println("head : " + pq.peek());
+
+        pq.remove();
+        System.out.println(pq);
+        pq.poll();
+        System.out.println(pq);
     }
 }

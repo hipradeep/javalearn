@@ -1,4 +1,4 @@
-package corejava.collections.queue.parityqueue;
+package corejava.collections.queue;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
@@ -7,7 +7,7 @@ public class ParityQueueWithClass {
     public static void main(String[] args) {
 
         PriorityQueue<Animal> pq = new PriorityQueue<>(5, new AnimalComparator());
-
+        //PriorityQueue<Animal> pq = new PriorityQueue<>(); //throw  exception
         pq.add(new Animal("rabbit", 2));
         pq.add(new Animal("rat", 1));
         pq.add(new Animal("ox", 8));
@@ -17,7 +17,7 @@ public class ParityQueueWithClass {
         while (!pq.isEmpty()) {
             System.out.println(pq.poll().getName());
         }
-
+        System.out.println(pq);
     }
 }
 
