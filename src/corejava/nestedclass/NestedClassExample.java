@@ -70,6 +70,20 @@ class Alpha{
         };
         t.retrofit();
     }
+
+    public void methodP(){
+        Fie f=new Fie(){
+            void display(){
+
+            }
+
+            @Override
+            void fieMethod() {
+                super.fieMethod();
+            }
+        };
+    }
+
 }
 
 
@@ -80,4 +94,9 @@ interface Gama{
 
 abstract class Theta{
     abstract void retrofit();
+}
+class Fie{
+    void fieMethod(){
+        System.out.println("fi method");
+    }
 }
