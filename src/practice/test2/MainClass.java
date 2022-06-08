@@ -75,6 +75,7 @@ class ITStudent extends Student implements StudentInterface {
             marks[i] = m;
         }
     }
+
     @Override
     void findResult() {
 
