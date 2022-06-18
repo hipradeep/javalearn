@@ -1,4 +1,4 @@
-package basicjava.abstrect_interface;
+package basicjava.abstrection.interfaces;
 
 
 interface Bag {
