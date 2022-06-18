@@ -1,45 +1,5 @@
 package basicjava.abstrection.interfaces;
 
-
-interface Bag {
-
-    //final and static
-    int cout = 10;
-
-    //interface method
-    public void interfaceMethod();
-
-    //default method
-    default void defaultMethod() {
-        //access private method of interface
-        gDog();
-        pCat();
-        System.out.println("default method");
-    }
-
-    //static method
-    static void doMethod() {
-        System.out.println("static method");
-    }
-
-    //private method, only access in interface
-    private void gDog() {
-        System.out.println("private method in interface gDog");
-    }
-
-    private static void pCat() {
-        System.out.println("private static method in interface pCat");
-    }
-
-}
-
-interface Cat extends Bag {
-    @Override
-    void interfaceMethod();
-
-    void catInterfaceMethod();
-}
-
 public class InterfaceExample {
     public static void main(String[] args) {
         Alpha alpha = new Alpha();
@@ -54,7 +14,7 @@ public class InterfaceExample {
         alpha.defaultMethod();
 
         //access static method
-        Bag.doMethod();
+        Bag.staticMethod();
 
     }
 }
@@ -75,3 +35,41 @@ class Alpha implements Bag, Cat {
     }
 }
 
+interface Bag {
+
+    //final and static
+    int cout = 10;
+
+    //interface method
+    public void interfaceMethod();
+
+    //default method
+    default void defaultMethod() {
+        //access private method of interface
+        gDog();
+        pCat();
+        System.out.println("default method");
+    }
+
+    //static method
+    static void staticMethod() {
+        System.out.println("static method");
+    }
+
+    //private method, only access in interface
+    private void gDog() {
+        System.out.println("private method in interface gDog");
+    }
+
+    private static void pCat() {
+        System.out.println("private static method in interface pCat");
+    }
+
+}
+
+interface Cat extends Bag {
+    @Override
+    void interfaceMethod();
+
+    void catInterfaceMethod();
+}
