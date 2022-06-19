@@ -1,6 +1,7 @@
 package dsanotes.basic.arrays.leetcode;
 
 public class Consecutive1sInBinaryArray {
+    //Given a binary array, find the maximum number of consecutive 1s in this array.
     public static void main(String[] args) {
 
         int[] nums={0,1,1,0,1,1,0,1,1,1};
@@ -13,14 +14,14 @@ public class Consecutive1sInBinaryArray {
 
         int cont=0;
         int max=0;
-        for (int i = 0; i < nums.length; i++) {
-            if(nums[i] == 1){
-                cont=cont+1;
-                if (cont>max){
-                    max=cont;
+        for (int num : nums) {
+            if (num == 1) {
+                cont = cont + 1;
+                if (cont > max) {
+                    max = cont;
                 }
-            }else {
-                cont=0;
+            } else {
+                cont = 0;
             }
         }
         return max;
