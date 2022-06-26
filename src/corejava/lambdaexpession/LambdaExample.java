@@ -6,7 +6,7 @@ public class LambdaExample implements MVP {
 
         LambdaExample lambdaExample = new  LambdaExample();
         //without lambda
-        lambdaExample.method();
+        lambdaExample.mvpMethod();
 
         //lambda expression
         Listener l = () -> {
@@ -33,8 +33,8 @@ public class LambdaExample implements MVP {
     }
 
     @Override
-    public void method() {
-        System.out.println("Method");
+    public void mvpMethod() {
+        System.out.println("MVPMethod");
     }
 }
 
@@ -44,8 +44,7 @@ interface Listener {
 }
 
 interface MVP {
-
-    void method();
+    void mvpMethod();
 }
 
 interface Sum {

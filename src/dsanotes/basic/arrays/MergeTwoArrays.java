@@ -35,6 +35,7 @@ public class MergeTwoArrays {
         System.out.println(Arrays.toString(c));
     }
 
+    //Time Complexity: O( nlog(n) + mlog(m) )
     private static void mergeTwoArrayUsingMap(int[] a, int[] b, int m, int n){
 
         //tree map maintain sorted order

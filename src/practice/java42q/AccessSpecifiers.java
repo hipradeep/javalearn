@@ -1,6 +1,6 @@
 package practice.java42q;
 
-//import dacclass.apr12.Hello;
+//import dacclass.april.apr12.Hello;
 
 public class AccessSpecifiers {
     //8. Write a JAVA program which illustrates the concept of accessspecifiers.

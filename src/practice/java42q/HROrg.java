@@ -1,6 +1,6 @@
 package practice.java42q;
 
-import dacclass.apr9.EmployeeOrg;
+import dacclass.april.apr9.EmployeeOrg;
 
 public class HROrg extends EmployeeOrg {
     int salaryIncreasedBy=10000;
