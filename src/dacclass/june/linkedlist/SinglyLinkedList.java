@@ -127,6 +127,7 @@ public class SinglyLinkedList {
 
     }
     private void removeFirst() {
+        System.out.println("\n Remove First element");
         if (head !=null){
             Node t=head.getNext();
             head=t;
@@ -136,21 +137,90 @@ public class SinglyLinkedList {
         }
     }
     private void removeLast() {
+        System.out.println("\n Remove Last element");
         if (head !=null){
 
-            Node r=head;
-            while (r.getNext().getNext()!=null){
-                r=r.getNext();
+            Node r = head;
+            while (r.getNext().getNext() != null) {
+                r = r.getNext();
             }
-           r.setNext(null);
+            r.setNext(null);
             //head=head.getNext();
-        }else {
+        } else {
             System.out.println("List is empty!");
         }
     }
+    public void removebydata(int val)
+    {
+        System.out.println("\n Remove "+val+ " Linked List");
+        if(head==null)
+        {
+            System.out.println("list is empty nothing can be deleted");
+        }
+        else
+        {
+            Node t=head;
+            Node r=null;
+            boolean flag=false;
+            while(t!=null)
+            {
+                if(t.getItem()==val)
+                {
+                    if(t==head)  //first node
+                    {
+                        head=t.getNext();
+                    }
+                    else   // last and between deletion
+                    {
+                        assert r != null;
+                        r.setNext(t.getNext());
+                    }
+                    flag=true;
+                    count--;
+                    break;
+                }
+                else
+                {
+                    r=t;
+                    t=t.getNext();
+                }
+            }
+            if(!flag)
+            {
+                System.out.println("node with given value not exist in the list.");
+            }
+        }
+    }
+    public void searching(int val) {
+        System.out.println("\nSearching "+val+" in linked list");
+        if (head == null) {
+            System.out.println("list is empty");
+        } else {
+            boolean flag = false;
+            Node r = head;
+            int j = 1;
+            while (r != null)   // processing including last node
+            {
+                if (r.getItem() == val) {
+                    System.out.println("\ndata found at position " + j);
+                    flag = true;
+                    break;
+                } else {
+                    j++;
+                    r = r.getNext();
+                }
+            }
+            if (!flag)  // flag==false
+            {
+                System.out.println("\ndata not found");
+            }
+        }
+
+    }
+
     public static void main(String[] args) {
         SinglyLinkedList linkedList = new SinglyLinkedList();
-        linkedList.create(3);
+        linkedList.create(6);
         linkedList.display();
 //        linkedList.insertAtBeginning(6);
 //        System.out.println("");
@@ -172,17 +242,20 @@ public class SinglyLinkedList {
 //        System.out.println("");
 //        linkedList.display();
 
-//        linkedList.removeFirst();
-//        System.out.println("");
-//        linkedList.display();
+        linkedList.searching(4);
 
+        linkedList.removeFirst();
+        linkedList.display();
 
         linkedList.removeLast();
-        System.out.println("");
+
         linkedList.display();
+
+        linkedList.removebydata(4);
+        linkedList.display();
+
+
     }
-
-
 
 
 }
