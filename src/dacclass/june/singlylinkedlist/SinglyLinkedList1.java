@@ -1,17 +1,17 @@
-package dacclass.june.linkedlist;
+package dacclass.june.singlylinkedlist;
 
 import java.util.Scanner;
 
-public class SinglyLinkedList {
+public class SinglyLinkedList1 {
     static Node head;
     static int count;
 
-    public SinglyLinkedList() {
+    public SinglyLinkedList1() {
         head = null;
         count = 0;
     }
 
-    void create(int n) {
+  void createLinkedList(int n) {
         Scanner sc = new Scanner(System.in);
         for (int i = 0; i < n; i++) {
             System.out.print("enter the node value : ");
@@ -33,7 +33,7 @@ public class SinglyLinkedList {
         }
     }
 
-    public void display() {
+    void display() {
         if (head == null) {
             System.out.println("list is empty");
         } else {
@@ -46,7 +46,7 @@ public class SinglyLinkedList {
         }
     }
 
-    public void insertAtBeginning(int item) {
+    void insertAtBeginning(int item) {
 
         Node t = new Node(item);
         if (head == null) {
@@ -57,7 +57,7 @@ public class SinglyLinkedList {
         }
         count++;
     }
-    public void insertAtEnd(int item){
+    void insertAtEnd(int item){
         Node t = new Node(item);
         if (head == null) {
             head = t;
@@ -70,7 +70,7 @@ public class SinglyLinkedList {
         }
         count++;
     }
-    public void insertAfter(int after, int item){
+    void insertAfter(int after, int item){
         Node t=new Node(item);
         if (head==null){
             head = t;
@@ -91,7 +91,7 @@ public class SinglyLinkedList {
         }
     }
 
-    public void insertBefore(int before, int item){
+    void insertBefore(int before, int item){
         Node t=new Node(item);
         if (head==null){
             head = t;
@@ -104,7 +104,7 @@ public class SinglyLinkedList {
             r.setNext(t);
         }
     }
-    private void insertAtPosition(int position, int item) {
+    void insertAtPosition(int position, int item) {
 
         Node t=new Node(item);
         if (head==null){
@@ -126,7 +126,7 @@ public class SinglyLinkedList {
 
 
     }
-    private void removeFirst() {
+    void removeFirst() {
         System.out.println("\n Remove First element");
         if (head !=null){
             Node t=head.getNext();
@@ -136,7 +136,7 @@ public class SinglyLinkedList {
             System.out.println("List is empty!");
         }
     }
-    private void removeLast() {
+    void removeLast() {
         System.out.println("\n Remove Last element");
         if (head !=null){
 
@@ -150,7 +150,7 @@ public class SinglyLinkedList {
             System.out.println("List is empty!");
         }
     }
-    public void removebydata(int val)
+    void removebydata(int val)
     {
         System.out.println("\n Remove "+val+ " Linked List");
         if(head==null)
@@ -191,7 +191,7 @@ public class SinglyLinkedList {
             }
         }
     }
-    public void searching(int val) {
+    void searching(int val) {
         System.out.println("\nSearching "+val+" in linked list");
         if (head == null) {
             System.out.println("list is empty");
@@ -218,67 +218,10 @@ public class SinglyLinkedList {
 
     }
 
-    public static void main(String[] args) {
-        SinglyLinkedList linkedList = new SinglyLinkedList();
-        linkedList.create(6);
-        linkedList.display();
-//        linkedList.insertAtBeginning(6);
-//        System.out.println("");
-//        linkedList.display();
 
-//        linkedList.insertAtEnd(8);
-//        System.out.println("");
-//        linkedList.display();
-
-//        linkedList.insertAfter(2, 10);
-//        System.out.println("");
-//        linkedList.display();
-
-//        linkedList.insertBefore(4, 12);
-//        System.out.println("");
-//        linkedList.display();
-
-//        linkedList.insertAtPosition(4, 15);
-//        System.out.println("");
-//        linkedList.display();
-
-        linkedList.searching(4);
-
-        linkedList.removeFirst();
-        linkedList.display();
-
-        linkedList.removeLast();
-
-        linkedList.display();
-
-        linkedList.removebydata(4);
-        linkedList.display();
-
-
-    }
 
 
 }
 
 
-class Node {
-    private final int item;
-    private Node next;
 
-    Node(int item) {
-        this.item = item;
-        this.next = null;
-    }
-
-    public int getItem() {
-        return item;
-    }
-
-    public Node getNext() {
-        return next;
-    }
-
-    public void setNext(Node next) {
-        this.next = next;
-    }
-}
