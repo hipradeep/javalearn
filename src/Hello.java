@@ -7,43 +7,14 @@ import java.util.concurrent.Executors;
 
 public class Hello {
 
-    public static void main(String[] args) throws IOException, ExecutionException, InterruptedException {
-//        FileOutputStream fos = new FileOutputStream ("output.txt");
-//        String data = "Learning";
-//        fos.write(data.getBytes());
-//
-//        fos.close();
-//
-//        fos = new FileOutputStream ("output.txt");
-//        data =" Java is really fun!";
-//        fos.write(data.getBytes());
-//        fos.close();
+    public static void main(String[] args) {
 
-                Object obj1 = new Object();
-                Object obj2= new Object();
+        int count =0;
+       //int x=count++;
+        int y=count--;
+        System.out.println(count);
+        System.out.println(y);
 
-                var service = Executors.newFixedThreadPool(3);
-                var future1 = service.submit(() -> {
-                    synchronized (obj1) {
-                        synchronized (obj2) {
-                            System.out.print("Hi");
-                        }
-                    }
-                });
 
-                var future2= service.submit(()  -> {
-                    synchronized (obj2) {
-                        synchronized (obj1) {
-                            System.out.print("Bye");
-
-                        }
-                    }
-
-                });
-
-                future1.get();
-                future2.get();
-            }
-
-        }
+        }}
 

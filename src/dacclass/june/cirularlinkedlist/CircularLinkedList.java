@@ -25,6 +25,20 @@ public class CircularLinkedList {
         return head == null && tail == null;
     }
 
+    void createCLL(int[] arr) {
+        for (int a : arr) {
+            Node t = new Node(a);
+            if (head == null) {
+                head = t;
+            } else {
+                tail.setNext(t);
+            }
+            tail=t;
+            tail.setNext(head);
+            count++;
+        }
+    }
+
     //create circular linked list
     void createCircularLL(int n) {
         System.out.println("\nCircular LinkedList Created of size : " + n);
@@ -50,7 +64,6 @@ public class CircularLinkedList {
         if (isEmpty()) {
             System.out.println("\nLinked List Is Empty");
         } else {
-            System.out.println("\nDisplay All Nodes of LinkedList");
             Node r = head;
             do {
                 if (r.getNext() != head)
@@ -65,10 +78,8 @@ public class CircularLinkedList {
 
     //inset at Last
     void insertAtLast(int item) {
-        System.out.println("\nInsert At Last - "+ item);
         Node t = new Node(item);
-
-        if (isEmpty()) {
+        if (head==null) {
             head = t;
             tail = t;
             t.setNext(head);
@@ -82,9 +93,8 @@ public class CircularLinkedList {
 
     //insert at beginning
     void insertAtBeginning(int item) {
-        System.out.println("\nInsert At Start - "+item);
         Node t = new Node(item);
-        if (isEmpty()) {
+        if (head==null) {
             head = t;
             tail = t;
             t.setNext(head);
@@ -113,6 +123,27 @@ public class CircularLinkedList {
             count += 1;
         }
     }
+
+    void insertAtIndex(int index, int item) {
+        if (index==0){
+            insertAtBeginning(item);
+            return;
+        }
+        if (index == count-1){
+            insertAtLast(item);
+            return;
+        }
+            Node t = new Node(item);
+            Node r = head;
+            for (int i = 1; i < index; i++) {
+                r = r.getNext();
+            }
+            t.setNext(r.getNext());
+            r.setNext(t);
+            count += 1;
+
+    }
+
 
     public void removeFromPosition(int position) {
         System.out.println("\nRemove at position-" + position);
