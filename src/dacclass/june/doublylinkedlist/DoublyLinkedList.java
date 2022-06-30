@@ -95,12 +95,69 @@ public class DoublyLinkedList {
 
     //insert before an Node
     void insertBeforeANode(int before, int item) {
+        System.out.println("Insert Node Before");
+        if (isEmpty()){
+            System.out.println("List Is Empty!");
+        }else{
+
+            DNode t=new DNode(item);
+            if (head.getNext()==null){
+                if (head.getItem()==before)
+                insertAtBeginning(item);
+                else System.out.println("Before node not found");
+            }else {
+                DNode r=head;
+                if (r.getItem()!=before){
+                    while (r.getNext()!=null && r.getNext().getItem()!=before){
+                        r=r.getNext();
+                    }
+                    if (r.getNext()==null){
+                        System.out.println("Before node not found");
+                    }else {
+                        t.setNext(r.getNext());
+                        t.setPrev(r);
+                        r.setNext(t);
+                        count+=1;
+                    }
+                }else {
+                    insertAtBeginning(item);
+                }
+
+            }
+        }
+
 
     }
 
-    //insert after an Node
+    //insert after A Node
     void insertAfterANode(int after, int item) {
+        System.out.println("Insert Node After");
+        if (isEmpty()){
+            System.out.println("List is empty");
+        }else {
+            DNode t=new DNode(item);
+            //list has single element
+            if (head.getNext()==null){
+                if (head.getItem()==after)
+                insertAtEnd(item);
+                else System.out.println("after not found");
+            }else {
 
+                DNode r=head;
+             while (r.getNext()!=null && r.getItem()!=after){
+                 r=r.getNext();
+             }
+                if (r.getItem()==after){
+                    r.setNext(t);
+                    t.setNext(null);
+                    t.setPrev(r);
+                    count+=1;
+                }else {
+                    System.out.println("after element not found*");
+                }
+            }
+
+        }
     }
 
     //insert at position
@@ -126,11 +183,80 @@ public class DoublyLinkedList {
                     head=t;
                     count+=1;
                 }else
-                System.out.println("Can not be insert!");
+                System.out.println("Can Not Insert!");
             }
 
         }
 
     }
+
+    //deleteElement at beginning
+    void removeFromBeginning(){
+        System.out.println("Remove from beginning");
+        if (isEmpty()){
+            System.out.println("List is empty");
+        }else {
+            if (head.getNext()==null){
+                head=null;
+            }else {
+                head=head.getNext();
+                head.setPrev(null);
+            }
+            count-=1;
+        }
+
+    }
+    //deleteElement at end
+    void removeFromEnd(){
+        System.out.println("Remove from end");
+        if (isEmpty()){
+            System.out.println("List is empty");
+        }else {
+            DNode r=head;
+            if (r.getNext()!=null){
+                while (r.getNext().getNext() != null){
+                    r=r.getNext();
+                }
+                r.setNext(null);
+            }else {
+                head=null;
+            }
+            count-=1;
+
+
+        }
+    }
+    //deleteElement before of a Node
+    void removeBeforeANode(){
+        System.out.println("Remove before");
+        if (isEmpty()){
+            System.out.println("List is empty");
+        }
+    }
+    //deleteElement after of a Node
+    void removeAfterANode(){
+        System.out.println("Remove after");
+        if (isEmpty()){
+            System.out.println("List is empty");
+        }
+    }
+    //deleteElement at particular position(index)
+    void removeFromParticularPosition(int position){
+        System.out.println("Remove from position - "+position);
+        if (isEmpty()){
+            System.out.println("List is empty");
+        }else {
+            DNode r=head;
+            for (int i = 0; i < position-2; i++) {
+                r=r.getNext();
+            }
+            r.setNext(r.getNext().getNext());
+            r.getNext().setPrev(null);
+            count-=1;
+        }
+
+    }
+
+
 
 }

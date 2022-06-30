@@ -47,6 +47,12 @@ public class DNode {
 *   - insertElement after of a Node
 *   - insertElement at particular position(index)
 *
+*   - deleteElement at beginning
+*   - deleteElement at end
+*   - deleteElement before of a Node
+*   - deleteElement after of a Node
+*   - deleteElement at particular position(index)
+*
 *
 *
 * */
