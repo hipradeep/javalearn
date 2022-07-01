@@ -201,32 +201,32 @@ class LinkedList {
         } else
             System.out.println("List is Empty");
     }
-}
 
-class Node {
-    private final int item; //Data item
-    private Node next; //Reference to the next node
+    static class Node {
+        private final int item; //Data item
+        private Node next; //Reference to the next node
 
-    public Node(int item) {
-        this.item = item;
-        this.next = null;
-    }
+        public Node(int item) {
+            this.item = item;
+            this.next = null;
+        }
 
-    public Node(int item, Node next) {
-        this.item = item;
-        this.next = next; //Refer to the 'next' node that was passed to this method
-    }
+        public Node(int item, Node next) {
+            this.item = item;
+            this.next = next; //Refer to the 'next' node that was passed to this method
+        }
 
-    public Node getNext() {
-        return next;
-    }
+        public Node getNext() {
+            return next;
+        }
 
-    public int getItem() {
-        return item;
-    }
+        public int getItem() {
+            return item;
+        }
 
-    public void setNext(Node next) {
-        this.next = next;
+        public void setNext(Node next) {
+            this.next = next;
+        }
     }
 }
 
