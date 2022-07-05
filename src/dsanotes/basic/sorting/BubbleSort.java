@@ -1,5 +1,7 @@
 package dsanotes.basic.sorting;
 
+import java.util.Arrays;
+
 public class BubbleSort {
 
     //also known as sinking sort, exchange sort
@@ -12,7 +14,8 @@ public class BubbleSort {
         //int[] arr={1};
 
         int n = arr.length;
-        bubbleSortOpt(arr, n);
+        //bubbleSortOpt(arr, n);
+        bubbleSort(arr, n);
     }
 
     //optimise solution
@@ -39,11 +42,15 @@ public class BubbleSort {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
-                    swap(arr, j);
+                    //swap(arr, j);
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
                 }
             }
         }
-        printArr(arr); // after sorting
+        System.out.println(Arrays.toString(arr));
+        //printArr(arr); // after sorting
     }
 
     //swap elements

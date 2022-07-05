@@ -38,15 +38,35 @@ public class Q1SortArray {
 
 
     //bubble sort
-    void sortArray(){
-        //array
-
-        for (int i = 0; i <=size; i++) {
-            for (int j = 0; j <=size; j++) {
-
-                //if ()
+    void sortArray() {
+        for (int i = 0; i < size - 1; i++) {
+            for (int j = 0; j < size - 1 - i; j++) {
+                if (array[j] > array[j + 1]) {
+                    swap(array, j);
+                }
             }
-
         }
+    }
+
+    private void swap(int[] arr, int j) {
+        int temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+    }
+    void display(){
+        System.out.print("[ ");
+        for (int i = 0; i < size; i++) {
+            System.out.print(array[i]+", ");
+        }
+        System.out.println("]");
+    }
+
+    public static void main(String[] args) {
+        Q1SortArray a=new Q1SortArray(10);
+        a.createArray(5);
+        a.display();
+        System.out.println("Sorted Array - ");
+        a.sortArray();
+        a.display();
     }
 }

@@ -1,5 +1,7 @@
 package dacclass.june.singlylinkedlist;
 
+import assignment.jul2ArrayLinkedList.Q10ReverseLinkedList;
+
 import java.util.Scanner;
 
 public class SinglyLinkedList2 {
@@ -229,6 +231,20 @@ public class SinglyLinkedList2 {
     }
     //delete Node at particular position(index)
     void deleteNodeAtIndex(int item) {
+
+    }
+    void reverseLinkedList(){
+
+        Node r, t, s;
+        r=null;
+        t=head;
+        while (t!=null){
+            s=r;
+            r=t;
+            t=t.getNext();
+            r.setNext(s);
+        }
+        head=r;
 
     }
 
