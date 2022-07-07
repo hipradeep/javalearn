@@ -30,7 +30,7 @@ class Alpha implements Bag, Cat {
     public void catInterfaceMethod() {
         System.out.println("cat interface method");
     }
-    class A{
+    static class A{
 
     }
 }
