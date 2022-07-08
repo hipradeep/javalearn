@@ -1,7 +1,4 @@
-package dsanotes.datastructures.linkedlists.sll;
-
-import dacclass.june.doublylinkedlist.DLL2;
-import dacclass.june.singlylinkedlist.SLL;
+package dsanotes.datastructures.linkedlists.singly;
 
 import java.util.Scanner;
 

@@ -25,18 +25,18 @@ public class QueueUsingLL {
         }
     }
 
-
     void enQueue(int item) {
         Node t = null;
         t = new Node(item);
         if (t == null) {
             System.out.println("Queue id full!");
         } else {
-            if (front == null)
-                front = t;
-            else
+            if (rear == null) {
+                front = rear = t;
+            }else {
                 rear.next = t;
-            rear = t;
+                rear = t;
+            }
             count++;
         }
     }
@@ -60,7 +60,7 @@ public class QueueUsingLL {
 
     void display() {
         if (front == null) {
-            System.out.println("Queue id Empty!");
+            System.out.println("Queue is Empty!");
             return;
         }
         Node r = front;
@@ -69,14 +69,15 @@ public class QueueUsingLL {
             r = r.next;
         }
 
+        System.out.println("");
     }
 
     public static void main(String[] args) {
         QueueUsingLL q = new QueueUsingLL();
         q.enQueue(10);
         q.enQueue(20);
-        q.enQueue(30);
-        q.enQueue(40);
+        //q.enQueue(30);
+        //q.enQueue(40);
         System.out.print("Queue elements - ");
         q.display();
         System.out.println("");
@@ -86,6 +87,9 @@ public class QueueUsingLL {
 
         System.out.print("Queue elements - ");
         q.display();
+        System.out.println("");
+        System.out.println(q.count);
+
     }
 }
 

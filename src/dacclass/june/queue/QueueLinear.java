@@ -1,18 +1,18 @@
 package dacclass.june.queue;
 
-public class QueueExample {
+public class QueueLinear {
     private final int size;
     private final int[] queue;
     private int front, rear;
 
-    public QueueExample(int size) {
+    public QueueLinear(int size) {
         this.size = size;
         queue = new int[this.size];
         front = -1;
         rear = -1;
     }
     boolean isFull() {
-        return (front == 0 && rear == size - 1);
+        return (rear == size - 1);
     }
     boolean isEmpty() {
         return front == -1;
@@ -37,8 +37,7 @@ public class QueueExample {
             if (front >= rear) {
                 front = -1;
                 rear = -1;
-            }
-            else {
+            } else {
                 front++;
             }
             return element;
@@ -70,20 +69,28 @@ public class QueueExample {
         }
     }
     public static void main(String[] args) {
-        QueueExample q=new QueueExample(8);
+        QueueLinear q=new QueueLinear(6);
         q.enQueue(10);
         q.enQueue(20);
         q.enQueue(30);
-        q.enQueue(40);
-        q.enQueue(50);
+//        q.enQueue(40);
+//        q.enQueue(50);
+//        q.enQueue(60);
+
 
         q.display();
         System.out.println("Front - "+q.front());
         System.out.println("Rear - "+q.rear());
         System.out.println("");
-        System.out.println("DeQueue - "+q.deQueue());
-        System.out.println("DeQueue - "+q.deQueue());
 
+        System.out.println("DeQueue - "+q.deQueue());
+        System.out.println("DeQueue - "+q.deQueue());
+       // System.out.println("DeQueue - "+q.deQueue());
+
+//        q.enQueue(70);
+//        q.enQueue(80);
+
+        q.display();
         System.out.println("");
         System.out.println("Front - "+q.front());
         System.out.println("Rear - "+q.rear());
