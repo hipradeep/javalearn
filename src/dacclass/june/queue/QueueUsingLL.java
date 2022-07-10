@@ -1,7 +1,5 @@
 package dacclass.june.queue;
 
-import dacclass.june.singlylinkedlist.SLL;
-
 public class QueueUsingLL {
     private Node front, rear;
     private int count;

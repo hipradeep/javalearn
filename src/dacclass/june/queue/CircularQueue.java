@@ -1,4 +1,4 @@
-package dacclass.june.queue.circilarqueue;
+package dacclass.june.queue;
 
 public class CircularQueue {
     private final int size;
