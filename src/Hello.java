@@ -9,12 +9,22 @@ public class Hello {
 
     public static void main(String[] args) {
 
-        int count =0;
-       //int x=count++;
-        int y=count--;
-        System.out.println(count);
-        System.out.println(y);
 
+        int f = f(1);
+        System.out.println(f);
 
-        }}
+    }
+       static int  f(int n){
+         int i = 1;
+        if(n >= 5)
+            return n;
+        n = n + i;
+        i++;
+        return(f(n));
+    }
+}
+
+class H{
+
+}
 

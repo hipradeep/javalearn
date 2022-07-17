@@ -17,6 +17,7 @@ public class StackLL {
     void push(int item) {
         Node t = null;
         t = new Node(item);
+        //heap is full
         if (t == null) {
             System.out.println("Node Cant Insert!");
         }
@@ -30,7 +31,7 @@ public class StackLL {
 
         if (top==null){
             System.out.println("Stack is empty!");
-            return 0;
+            return -1;
         }
         Node t=top;
         top=top.next;

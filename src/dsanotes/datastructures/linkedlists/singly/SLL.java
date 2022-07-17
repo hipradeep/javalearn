@@ -1,5 +1,7 @@
 package dsanotes.datastructures.linkedlists.singly;
 
+import java.util.Scanner;
+
 public class SLL {
     private Node head;
     private int count;
@@ -12,6 +14,23 @@ public class SLL {
             else tail.next = t;
             tail = t;
             count++;
+        }
+    }
+    void createLinkedList(int n) {
+        Scanner sc = new Scanner(System.in);
+        for (int i = 0; i < n; i++) {
+            System.out.print("Enter data for node " + (i + 1) + " : ");
+          Node t = new Node(sc.nextInt());
+            if (i == 0) {
+                head = t;
+            } else {
+                Node r = head;
+                while (r.next != null) {
+                    r = r.next;
+                }
+                r.next = t;
+            }
+            count += 1;
         }
     }
 
@@ -131,7 +150,6 @@ public class SLL {
         ll.display();
         System.out.println( ll.deleteFirstNode());
         ll.display();
-
 
     }
 }

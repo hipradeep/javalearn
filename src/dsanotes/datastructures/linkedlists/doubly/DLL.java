@@ -18,7 +18,7 @@ public class DLL {
             next = prev = null;
         }
 
-        public Node(int item,  Node prev,Node next) {
+        public Node(int item, Node prev, Node next) {
             this.item = item;
             this.next = next;
             this.prev = prev;
@@ -27,7 +27,6 @@ public class DLL {
 
     void createDll(int n) {
         Scanner sc = new Scanner(System.in);
-
         for (int i = 0; i < n; i++) {
             System.out.print("Enter data for Node-" + i + " : ");
             Node t = new Node(sc.nextInt());
@@ -49,12 +48,11 @@ public class DLL {
             Node t = new Node(p);
             if (head == null) {
                 head = t;
-                tail = t;
             } else {
                 tail.next = t;
                 t.prev = tail;
-                tail = t;
             }
+            tail = t;
             count++;
         }
     }
@@ -77,12 +75,11 @@ public class DLL {
         Node t = new Node(item);
         if (head == null) {
             head = t;
-            tail = t;
         } else {
             tail.next = t;
             t.prev = tail;
-            tail = t;
         }
+        tail = t;
         count++;
     }
 
@@ -109,15 +106,55 @@ public class DLL {
 //        r.next = t;
         //or
 
-        Node t=new Node(item);
+        Node t = new Node(item);
         t.next = r.next;
         t.prev = r;
         r.next = t;
-
         count++;
-
-
     }
+
+    void insertBeforeANode(int nItem, int item) {
+        if (head == null) {
+            System.out.println("LL Is Empty!");
+            return;
+        }
+        Node t = new Node(item);
+        Node r = head;
+        while (r != null && r.item != nItem) {
+            r = r.next;
+        }
+        if (r != null) {
+            t.next = r;
+            t.prev = r.prev;
+            r.prev.next = t;
+            r.prev = t;
+            count++;
+        } else {
+            System.out.println("Node Not fond!");
+        }
+    }
+
+    void insertAfterANode(int nItem, int item) {
+        if (head == null) {
+            System.out.println("LL Is Empty!");
+            return;
+        }
+        Node t = new Node(item);
+        Node r = head;
+        while (r != null && r.item != nItem) {
+            r = r.next;
+        }
+        if (r != null) {
+            t.prev = r;
+            t.next = r.next;
+            r.next.prev = t;
+            r.next = t;
+            count++;
+        } else {
+            System.out.println("Node Not found!");
+        }
+    }
+
 
     void display() {
         if (head == null) System.out.println("List Is empty!");
@@ -144,7 +181,11 @@ public class DLL {
         dl.display();
         dl.insertAtEnd(21);
         dl.display();
-        dl.insertAtIndex(5,31);
+        dl.insertAtIndex(5, 31);
+        dl.display();
+        dl.insertBeforeANode(30, 45);
+        dl.display();
+        dl.insertAfterANode(30, 46);
         dl.display();
     }
 

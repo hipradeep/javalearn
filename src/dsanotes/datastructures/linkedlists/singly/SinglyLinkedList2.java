@@ -3,7 +3,7 @@ package dsanotes.datastructures.linkedlists.singly;
 import java.util.Scanner;
 
 //with size variable
-public class SinglyLinkedList {
+public class SinglyLinkedList2 {
     private Node head;
     private int size;
 
@@ -44,7 +44,6 @@ public class SinglyLinkedList {
             }
             size += 1;
         }
-
     }
 
     //create linked list using array
@@ -163,7 +162,7 @@ public class SinglyLinkedList {
     }
 
     public static void main(String[] args) {
-        SinglyLinkedList ll = new SinglyLinkedList();
+        SinglyLinkedList2 ll = new SinglyLinkedList2();
         ll.createLL(new int[]{10, 20, 30});
         ll.display();
         ll.insertAtStart(11);
