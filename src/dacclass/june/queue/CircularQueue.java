@@ -13,7 +13,7 @@ public class CircularQueue {
     }
 
     boolean isFull() {
-        if (rear == size - 1 && front == 0) {
+        if (front == 0 && rear == size - 1) {
             return true;
         }
         if (rear == front - 1) { //front==rear+1
@@ -28,7 +28,7 @@ public class CircularQueue {
         }
         return false;
 
-        //bich me hum is liye check nahi karte hai, last element delete karene ke baad reset kar dete ha,
+        //bich me hum is liye check nahi karte hai, last element delete karene ke baad reset kar dete hai,
     }
 
     void enQueue(int item) {
