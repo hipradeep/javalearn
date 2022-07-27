@@ -97,7 +97,6 @@ class BinarySearch {
             System.out.println("Record Not Found");
         }
 
-
     }
 
 
