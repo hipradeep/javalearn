@@ -1,6 +1,6 @@
 package dsanotes.basic.matrix;
 
-public class PrintMatrixInSpiralOrder {
+public class SpiralOrderPrint {
     //Print matrix in spiral order
 
     public static void main(String[] args) {
