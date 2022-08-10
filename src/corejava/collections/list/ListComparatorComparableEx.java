@@ -9,9 +9,9 @@ public class ListComparatorComparableEx {
 
         // list1();
 
-        //list2();
+        list2();
 
-       list3();
+      // list3();
 
         //list4();
 
@@ -85,12 +85,12 @@ public class ListComparatorComparableEx {
         list.add(new Product("Abc", 56.2));
         list.add(new Product("laptop", 156.2));
         list.add(new Product("mouse", 45.2));
-        list.add(new Product("Mobile", 4000.2));
+        list.add(new Product("bobile", 4000.2));
 
         System.out.println(list);
 
         //using comparable
-        Collections.sort(list);
+        Collections.sort(list);// sort by price, declare in product class compareTo
 
         System.out.println(list);
     }
@@ -147,8 +147,6 @@ class Product1 {
 
 
 class Product1Comparator<P> implements Comparator<Product1>{
-
-
 
     @Override
     public int compare(Product1 o1, Product1 o2) {
