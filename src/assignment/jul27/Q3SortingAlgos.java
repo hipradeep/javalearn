@@ -7,7 +7,8 @@ public class Q3SortingAlgos {
     public static void main(String[] args) {
         int[] arr = {1, 20, 14, 5, 12, 14, 45, 7};
 
-        System.out.println("Insertion sort");
+        System.out.println(Arrays.toString(arr));
+       System.out.println("Insertion sort");
         insertionSort(arr, arr.length);
         System.out.println("Bubble Sort");
         bubbleSort(arr, arr.length);
@@ -17,7 +18,7 @@ public class Q3SortingAlgos {
         heapSort(arr);
         System.out.println("Quick Sort");
         quickSort(arr, 0, arr.length - 1);
-
+        System.out.println(Arrays.toString(arr));
     }
 
     private static void selectionSort(int[] arr, int n) {

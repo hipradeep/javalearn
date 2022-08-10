@@ -7,7 +7,10 @@ public class StackExample {
         Stack<String> stringStack=new Stack<>();
         stringStack.add("pradeep");
         stringStack.push("maurya");
+        stringStack.push("maurya");
         stringStack.push("lko");
+        stringStack.push(null);
+        stringStack.push(null);
         System.out.println(stringStack);
 
         System.out.println("Pop : "+stringStack.pop());

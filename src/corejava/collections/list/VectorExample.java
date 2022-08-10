@@ -9,6 +9,9 @@ public class VectorExample {
         vector.add(200);
         vector.add(300);
         vector.add(200);
+        vector.add(200);
+        vector.add(null);
+        vector.add(null);
         vector.addElement(400);
         vector.setElementAt(500, 1);
         vector.add(600);
@@ -19,7 +22,7 @@ public class VectorExample {
         System.out.println(vector);
         System.out.println("Default capacity is: " + vector.capacity());
 
-        //use remove() method to delete the first occurence of an element
+        //use remove() method to delete the first occurrence of an element
         System.out.println("Remove first occurrence of element 200: " + vector.remove((Integer) 200));
         System.out.println(vector);
 

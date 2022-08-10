@@ -17,10 +17,11 @@ class EvenThread extends Thread{
         try{
             for (int i = 0; i <20 ; i++) {
                 Thread.sleep(1000);
-                if (i%2==0)
-                System.out.println(i);
+                if (i%2==0) {
+                    System.out.println(i);
+                }
             }
-        }catch (Exception e){
+        }catch (Exception ignored){
 
         }
     }
@@ -33,10 +34,11 @@ class OddThread implements Runnable{
         try{
             for (int i = 0; i <20 ; i++) {
                 Thread.sleep(1000);
-                if (i%2!=0)
+                if (i%2!=0) {
                     System.out.println(i);
+                }
             }
-        }catch (Exception e){
+        }catch (Exception ignored){
 
         }
     }

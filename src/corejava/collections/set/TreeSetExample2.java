@@ -9,7 +9,7 @@ public class TreeSetExample2 {
         mens.add(new Man("Zebra", 10));
         mens.add(new Man("Nagu", 30));
         mens.add(new Man("Bholu", 11));
-        mens.add(null);
+        //mens.add(null);
 
         System.out.println(mens);
 
