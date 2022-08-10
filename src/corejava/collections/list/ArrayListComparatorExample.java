@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class ArrayListExample3 {
+public class ArrayListComparatorExample {
     public static void main(String[] args) {
         ArrayList<Book> bookList = new ArrayList<>();
         bookList.add(new Book("Java", 400.0, 5));
@@ -16,7 +16,14 @@ public class ArrayListExample3 {
         for (Book b : bookList) {
             System.out.println(b.toString());
         }
+        System.out.println("Sort by price, by implementing Comparable in Book class");
+        Collections.sort(bookList);
+
+        for (Book b : bookList) {
+            System.out.println(b.toString());
+        }
         System.out.println("Sort by name");
+
         Collections.sort(bookList, new Comparator<Book>() {
             @Override
             public int compare(Book o1, Book o2) {
@@ -63,7 +70,7 @@ public class ArrayListExample3 {
     }
 }
 
-class Book {
+class Book implements Comparable<Book> {
     String name;
     double price;
     int qty;
@@ -81,5 +88,14 @@ class Book {
                 ", price=" + price +
                 ", qty=" + qty +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Book o) {
+        if (this.price > o.price)
+            return 1;
+        else if (this.price < o.price)
+            return -1;
+        else return 0;
     }
 }
