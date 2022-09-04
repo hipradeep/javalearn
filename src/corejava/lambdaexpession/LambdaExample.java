@@ -14,7 +14,7 @@ public class LambdaExample implements MVP {
         };
         l.onClick();
 
-        Sum s1=new Sum() {
+        Sum s1= new Sum() {
             @Override
             public int sum1(int a, int b, int c) {
                 return a+b+c;
@@ -29,24 +29,18 @@ public class LambdaExample implements MVP {
 
        int k = s.sum1(4,5, 4);
         System.out.println(k);
-
     }
-
     @Override
     public void mvpMethod() {
         System.out.println("MVPMethod");
     }
 }
-
 interface Listener {
-
     void onClick();
 }
-
 interface MVP {
     void mvpMethod();
 }
-
 interface Sum {
     int sum1(int a, int b, int c);
 }

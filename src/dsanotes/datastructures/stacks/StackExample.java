@@ -31,7 +31,7 @@ public class StackExample {
 class Stack {
     private final int size;           // size of the stack
     private final int[] intArray;     // stack storage
-        private int top;              // top of the stack
+    private int top;              // top of the stack
 
 
     public Stack(int size) {
