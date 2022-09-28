@@ -1,4 +1,4 @@
-package dsanotes.basic.searching.binarysearch.ques;
+package dsanotes.basic.searching.binarysearch;
 
 public class CeilingOfNumber {
     public static void main(String[] args) {
