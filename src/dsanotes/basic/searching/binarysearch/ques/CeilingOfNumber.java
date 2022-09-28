@@ -27,6 +27,7 @@ public class CeilingOfNumber {
             mid = start + (end - start) / 2;
         }
         //when while loop is break start=end +1;
+      //  System.out.println("S-"+start+"E-"+end);
         return nums[start]; // returning ceiling
     }
 }
