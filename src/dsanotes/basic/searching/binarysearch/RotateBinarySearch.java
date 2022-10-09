@@ -21,7 +21,8 @@ public class RotateBinarySearch {
         if (nums[pivot] == target) {
             return pivot;
         }
-
+        
+        //the task is where to search, right or left side of pivot element
         if (target >= nums[0]) {
             return binarySearch(nums, target, 0, pivot - 1);
         }
@@ -51,9 +52,11 @@ public class RotateBinarySearch {
 
         while (start <= end) {
             int mid = start + (end - start) / 2;
+            //if mid is last element : mid < end
             if (mid < end && nums[mid] > nums[mid + 1]) {
                 return mid;
             }
+            //if mid is first element : mid > start
             if (mid > start && nums[mid] < nums[mid - 1]) {
                 return mid - 1;
             }
