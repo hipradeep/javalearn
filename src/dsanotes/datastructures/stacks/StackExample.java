@@ -3,29 +3,55 @@ package dsanotes.datastructures.stacks;
 public class StackExample {
     public static void main(String[] args) {
         // make a new stack
-        Stack stack = new Stack(10);
+//        Stack stack = new Stack(10);
+//
+//        // push items on to the stack
+//        stack.push(3);
+//        stack.push(5);
+//        stack.push(9);
+//        stack.push(1);
+//        stack.push(12);
+//        stack.push(15);
+//
+//        System.out.println("Element at top of the stack: " + stack.peek());
+//        System.out.println("Elements: ");
+//
+//        // print stack data
+//        while (!stack.isEmpty()) {
+//            int data = stack.pop();
+//            System.out.println(data);
+//        }
+//
+//        System.out.println("Stack full: " + stack.isFull());
+//        System.out.println("Stack empty: " + stack.isEmpty());
 
-        // push items on to the stack
-        stack.push(3);
-        stack.push(5);
-        stack.push(9);
-        stack.push(1);
-        stack.push(12);
-        stack.push(15);
+        int[] nums = {5, 0, 0};
 
-        System.out.println("Element at top of the stack: " + stack.peek());
-        System.out.println("Elements: ");
-
-        // print stack data
-        while (!stack.isEmpty()) {
-            int data = stack.pop();
-            System.out.println(data);
-        }
-
-        System.out.println("Stack full: " + stack.isFull());
-        System.out.println("Stack empty: " + stack.isEmpty());
+        helper(nums);
 
     }
+
+    static void helper(int[] nums) {
+        Stack stack = new Stack(nums.length);
+        int result=0;
+        for (int i = 0; i < nums.length; i++) {
+
+            if (nums[i]==0){
+                stack.pop();
+            }else {
+               stack.push(nums[i]);
+                for (int j = 0; j < nums.length; j++) {
+                    result=result+ nums[j]*(nums[j]*nums[j]);
+                }
+
+
+
+            }
+
+        }
+
+    }
+
 }
 
 class Stack {

@@ -13,8 +13,10 @@ class HashSetExample {
 
         Set<Employee> employees = new HashSet<>();
 
-        employees.add(e1);
-        employees.add(e2);
+        //employees.add(e1);
+
+        System.out.println(employees.add(e1));
+        System.out.println(employees.add(e2));
 
         System.out.println(employees);
     }

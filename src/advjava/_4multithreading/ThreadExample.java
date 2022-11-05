@@ -27,6 +27,7 @@ public class ThreadExample {
                     System.out.println("4 running");
                 }
             }, "Third thread");
+
             t4.start();
         }
     }
@@ -35,7 +36,9 @@ public class ThreadExample {
 class Thread1 extends Thread{
     @Override
     public void run() {
+
         System.out.println("Running....");
+
     }
 }
 //there might be a case when we have to extend a class with parent class, then we can further extend Thread class,
