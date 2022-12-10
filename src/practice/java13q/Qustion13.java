@@ -8,12 +8,12 @@ public class Qustion13 {
         new MyThread();
         try {
             for (int k = 0; k < 6; k++) {
-                System.out.println("Main thread is Running" + k+"\n");
+                System.out.println("practice.test.Main thread is Running" + k+"\n");
                 Thread.sleep(20);
             }
         } catch (InterruptedException e) {
         }
-        System.out.println("Main thread is Exiting ");
+        System.out.println("practice.test.Main thread is Exiting ");
     }
 }
 class MyThread extends Thread {

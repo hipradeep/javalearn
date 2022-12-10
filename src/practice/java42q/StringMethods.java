@@ -4,7 +4,7 @@ public class StringMethods {
     public static void main(String[] args) {
 
         // create a string
-        String greet = "Hello! World";
+        String greet = "practice.test.Hello! World";
         System.out.println("String: " + greet);
 
         // get the length of greet
@@ -28,7 +28,7 @@ public class StringMethods {
         System.out.println("Strings to Upper case and Lower Case : " + lc+"  "+uc);
 
         // contains()
-        System.out.println("is 'hello' contain in greet string  : " + greet.contains("Hello"));
+        System.out.println("is 'hello' contain in greet string  : " + greet.contains("practice.test.Hello"));
 
         //substring()
         System.out.println("Subsring of greet string  : " + greet.substring(5));

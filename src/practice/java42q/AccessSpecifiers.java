@@ -1,6 +1,6 @@
 package practice.java42q;
 
-//import dacclass.april.apr12.Hello;
+//import dacclass.april.apr12.practice.test.Hello;
 
 public class AccessSpecifiers {
     //8. Write a JAVA program which illustrates the concept of accessspecifiers.
@@ -11,7 +11,7 @@ public class AccessSpecifiers {
 //        sumClass.x=9;
 
         Hello hello=new Hello();
-        int protected_var = hello.PROTECTED_VAR;  // showing error, not accessible due to protected member of Class Hello(outside practice package)
+        int protected_var = hello.PROTECTED_VAR;  // showing error, not accessible due to protected member of Class practice.test.Hello(outside practice package)
         System.out.println(protected_var);
         hello.protectedMethod(); //
 

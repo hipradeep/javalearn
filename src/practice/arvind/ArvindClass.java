@@ -1,7 +1,5 @@
 package practice.arvind;
 
-import java.util.Arrays;
-
 public class ArvindClass {
 
     public static void main(String[] args) {
@@ -19,7 +17,7 @@ public class ArvindClass {
         yBulb.eDate="2024";
         yBulb.phase=3;
 
-        Bulb gBulb=new Bulb(80, "Green", "Gama", "2025", 2);
+        Bulb gBulb=new Bulb(80, "Green", "leetcode/Gama", "2025", 2);
 
         System.out.println(gBulb.bName);
         System.out.println(gBulb.getWatt());
