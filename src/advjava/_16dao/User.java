@@ -1,4 +1,4 @@
-package advjava._dao;
+package advjava._16dao;
 
 public class User {
 

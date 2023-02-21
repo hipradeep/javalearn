@@ -1,4 +1,4 @@
-package advjava._digitalsignature;
+package advjava._17digitalsignature;
 
 import java.io.*;
 import java.security.*;

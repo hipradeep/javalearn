@@ -778,11 +778,11 @@ class HE extends Thread {
     }
 }
 
-class Abc implements Runnable {
+class AbcXX implements Runnable {
 
     public static void main(String[] args) throws Exception {
 
-        Thread t = new Thread(new Abc());
+        Thread t = new Thread(new AbcXX());
         t.run();
         t.run();
         t.start();

@@ -1,6 +1,6 @@
 package dacclass.june.array;
 
-import dacclass.april.apr7.A;
+
 
 public class Array1 {
 

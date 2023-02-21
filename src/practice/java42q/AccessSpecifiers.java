@@ -10,10 +10,10 @@ public class AccessSpecifiers {
 //        sumClass.sum(); // accessible due to public method of Class SumClass
 //        sumClass.x=9;
 
-        Hello hello=new Hello();
-        int protected_var = hello.PROTECTED_VAR;  // showing error, not accessible due to protected member of Class practice.test.Hello(outside practice package)
-        System.out.println(protected_var);
-        hello.protectedMethod(); //
+//        Hello hello=new Hello();
+//        int protected_var = hello.PROTECTED_VAR;  // showing error, not accessible due to protected member of Class practice.test.Hello(outside practice package)
+//        System.out.println(protected_var);
+//        hello.protectedMethod(); //
 
     }
 
