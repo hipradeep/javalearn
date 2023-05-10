@@ -6,7 +6,7 @@ public class BinarySearch {
     public static void main(String[] args) {
 
         int[] nums = {-30, -11, 1, 2, 8, 16, 19, 23, 28, 45};
-        int target=-30;
+        int target=19;
         //Arrays.sort(nums);
         System.out.println(Arrays.toString(nums));
         int index=searchBinary(nums, target);
@@ -20,17 +20,19 @@ public class BinarySearch {
         if (nums.length==0) return -1;
 
         int start=0, end=nums.length-1;
-        int  mid = start + (end - start) / 2;
-
+        int val=0;
         while (start <= end) {
+            int  mid = start + (end - start) / 2;
+            val=nums[mid];
             if ( target < nums[mid] ) {
                 end = mid - 1;
+                val=nums[end];
             } else if (target > nums[mid]) {
                 start = mid + 1;
+                val=nums[start];
             } else if (nums[mid] == target) {
                return mid;
             }
-            mid = start + (end - start) / 2;
         }
         return  -1;
     }
