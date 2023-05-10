@@ -10,7 +10,7 @@ public class Utils {
         else System.out.print(a + "  ");
     }
 
-    public static void printMultidimensionalArray(int[][] arr) {
+    public static void printMatrix(int[][] arr) {
         int rows = arr.length;
         int column = arr[0].length;
         for (int i = 0; i < rows; i++) {

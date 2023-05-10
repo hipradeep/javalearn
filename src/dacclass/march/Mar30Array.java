@@ -20,7 +20,7 @@ public class Mar30Array {
 //                arr[i][j]=sc.nextInt();
 //            }
 //        }
-       Utils.printMultidimensionalArray(arr);
+       Utils.printMatrix(arr);
         System.out.println("  ");
         int sum = 0;
         for (int i = 0; i < 4; i++) {
