@@ -1,4 +1,4 @@
-package java_vs.java10;
+package java_v;
 
 import java.io.Closeable;
 
