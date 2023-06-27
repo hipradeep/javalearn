@@ -16,7 +16,7 @@ public class Q5StringFirstLatterToUpperCase {
         str=sc.nextLine();
         int l=str.length();
 
-        String[] arrOfStr = str.split(" "); // make an array of strings, and split main String over space
+        String[] arrOfStr = str.split(" "); // make an array of strings, and split main.kotlin.main String over space
 
         StringBuilder sb=new StringBuilder();
         for(int i = 0; i < arrOfStr.length; i++) {

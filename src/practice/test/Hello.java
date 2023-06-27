@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Hello {
 
-//    public static void main(String[] args) {
+//    public static void main.kotlin.main(String[] args) {
 //
 //
 ////        int n = 9;
@@ -130,7 +130,7 @@ class CVFT{
 }
 
 //class Boka{
-//    public static void main(String[] args) {
+//    public static void main.kotlin.main(String[] args) {
 //        String [] arr = {"Daisy", "Rose", "Poppy"};
 //
 //        System.out.println(solution(arr));

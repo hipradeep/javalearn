@@ -5,7 +5,7 @@ import java.util.Vector;
 
 public class Q2VectorExample {
     //Q 2 write a program to create vector of string and add elements to vector
-    //check vector class main functions like
+    //check vector class main.kotlin.main functions like
     //1)adding elements in vector
     //2)traversing all vector elements
     //3)print vector object hashcode

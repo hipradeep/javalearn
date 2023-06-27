@@ -7,7 +7,7 @@ public class Q4EmployeeManagement {
     //a) create getEmployee method that initialize class variable by using scanner method and asking value from user
     //b create showEmployee that display employee record
     //c) create addbonus() method that add 5000 Rs. to employee salary with age above 40 and 1000 to employee below age 40.
-    //d) In main method ask 3 employee record from user and call above methods
+    //d) In main.kotlin.main method ask 3 employee record from user and call above methods
 
     public static void main(String[] args) {
         Employee emp1=new Employee();

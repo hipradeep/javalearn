@@ -1,6 +1,5 @@
 /*Online Java Paper Test*/
 package practice.onlineTest;
-import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
@@ -142,7 +141,7 @@ class OnlineTest extends JFrame implements ActionListener
 		if(current==8)
 		{
 			l.setText("Que9: which function is not present in Applet class");
-			jb[0].setText("init");jb[1].setText("main");jb[2].setText("start");jb[3].setText("destroy");
+			jb[0].setText("init");jb[1].setText("kotlin");jb[2].setText("start");jb[3].setText("destroy");
 		}
 		if(current==9)
 		{

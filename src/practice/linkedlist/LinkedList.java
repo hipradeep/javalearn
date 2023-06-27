@@ -5,6 +5,47 @@ class LinkedList {
     public Node tail = null;
     private int size = 0;
 
+    public Node removeNthFromEnd(Integer n){
+        // [ 0 ] -> [ 10 ] -> [ 20 ] -> [ 30 ] -> [ ]
+        // dummy    head
+        // slow
+        // fast,
+        // start both pointer one step before head that is dummy
+        // because to delete current node we have to access that previous node
+        // so the slow pointer will always one step back that current node
+
+       Node dummy=new Node(0);
+       dummy.next=head;
+       Node slow=dummy;
+       Node fast=dummy;
+        for (int i = 0; i <=n; i++) {
+            fast=fast.next;
+
+        }
+        while (fast!=null){
+            slow=slow.next;
+            fast=fast.next;
+        }
+
+        slow.next=slow.next.next;
+        return dummy.next;
+
+
+
+
+    }
+
+    private Node getNextNth(Node right, Integer n) {
+        int i=0;
+        Node r=right;
+        while (i!=n){
+            r=r.next;
+            i++;
+        }
+        return r;
+    }
+
+
     public Node getHead() {
         return head;
     }

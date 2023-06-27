@@ -1,7 +1,7 @@
 package practice.linkedlist;
 
 class Node {
-    final Integer data;
+    Integer data;
     Node next;
 
     Node(Integer data, Node next) {

@@ -1,7 +1,7 @@
 package leetcode.Gama.T2;
 
 //public class CalculatorTest {
-//    public static void main(String[] args) {
+//    public static void main.kotlin.main(String[] args) {
 //        int num1 = 10;
 //        int num2 = 15;
 //        Calculator calculatorSum = (int sum) -> num1 + num2;

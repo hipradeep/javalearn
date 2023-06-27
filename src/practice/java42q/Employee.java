@@ -88,7 +88,7 @@ public class Employee extends Person{
         System.out.println("Salary - "+salary);
     }
 
-    public static void main(String[] args) {
+    public static void main.kotlin.main(String[] args) {
         Employee e=new Employee();
         e.setData();
         e.getData();

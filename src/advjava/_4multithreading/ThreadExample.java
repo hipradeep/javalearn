@@ -2,9 +2,9 @@ package advjava._4multithreading;
 
 public class ThreadExample {
     //A thread in Java is the direction or path that is taken while a program is being executed. Generally,
-    // all the programs have at least one thread, known as the main thread, that is provided by the JVM or
-    // Java Virtual Machine at the starting of the program’s execution. At this point, when the main thread is provided,
-    // the main() method is invoked by the main thread.
+    // all the programs have at least one thread, known as the main.kotlin.main thread, that is provided by the JVM or
+    // Java Virtual Machine at the starting of the program’s execution. At this point, when the main.kotlin.main thread is provided,
+    // the main.kotlin.main() method is invoked by the main.kotlin.main thread.
     //
     //A thread is critical in the program because it enables multiple operations to take place within a single method.
     // Each thread in the program often has its own program counter, stack, and local variable.

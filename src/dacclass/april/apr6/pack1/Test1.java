@@ -1,5 +1,5 @@
 package dacclass.april.apr6.pack1;
-// main class can either be public or default 
+// main.kotlin.main class can either be public or default
 //private class abc //error
 
  public class Test1

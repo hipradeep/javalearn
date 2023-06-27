@@ -2,13 +2,45 @@ package practice.linkedlist;
 
 class LinkedList2 extends LinkedList {
 
+
+
+    public  Node addTwoNumber(Node h1, Node h2){
+        //h1, h2 are in reverse order
+        int carry=0;
+        Node sum=null;
+        Node temp=sum;
+        while(h1!=null && h2!=null|| carry!=0){
+            int s=0;
+            if(h1!=null){
+                s=s+h1.data;
+               h1=h1.next;
+
+            }
+
+            if(h2!=null){
+                s=s+h2.data;
+               h2=h2.next;
+            }
+            s=s+carry;
+            carry=s/10;
+            Node t=new Node(s%10);
+            
+            temp.next=t;
+            temp=temp.next;
+
+        }
+        return sum.next;
+    }
+
+
+
     //is palindrome
 
     public boolean isPalindrome(){
-        if (isEmpty() || head.next==null) return true;
+        if (head==null || head.next==null) return true;
         Node slow=head;
         Node fast= head;
-        while (fast!=null && fast.next!=null){
+        while(fast.next !=null && fast.next.next!=null){
             slow=slow.next;
             fast=fast.next.next;
         }
@@ -96,7 +128,7 @@ class LinkedList2 extends LinkedList {
     }
 
     public Node reverseLinkedList(Node hd) {
-        if (isEmpty() || hd.next==null) return hd;
+        if (hd==null || hd.next==null) return hd;
 
         Node next,prev=null;
 

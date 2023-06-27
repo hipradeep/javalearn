@@ -6,7 +6,7 @@ public class Q9StaticMethod {
     // “<<ClassName>>.<<MethodName>>”
     //A static method can access static variables directly and it cannot access non-static variables and can
     // only call a static method directly and it cannot call a non-static method from it.
-    //Only the main() method which is static will be called by the
+    //Only the main.kotlin.main() method which is static will be called by the
     // JVM automatically, Not all the static method will be called automatically.
 
     public static void main(String[] args) {

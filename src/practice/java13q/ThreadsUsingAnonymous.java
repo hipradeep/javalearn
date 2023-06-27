@@ -44,7 +44,7 @@ public class ThreadsUsingAnonymous {
         System.out.println(th.getClass()+ " " + th.getClass().getSuperclass());
         for(int i=0;i<20;i++)
         {
-            System.out.println("i am main Thread");
+            System.out.println("i am main.kotlin.main Thread");
         }
 
 

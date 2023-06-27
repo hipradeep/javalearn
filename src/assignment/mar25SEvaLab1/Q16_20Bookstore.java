@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Q16_20Bookstore {
 
     //Q 16 create a class bookstore having  fields like book-name,qty and price.
-    //define tho methods input and display() call both methods in main
+    //define tho methods input and display() call both methods in main.kotlin.main
 
     //Q 17 in same above question define another method chekprice that return integer value
     // i.e discounted amount if price>5000 discount is 200 rs else 100 rs.
@@ -13,9 +13,9 @@ public class Q16_20Bookstore {
     //Q 18 In same above question define static variable college-name.
 
     //Q 19 in above question define static method to initialization
-    //all static method in and call static method in main.
+    //all static method in and call static method in main.kotlin.main.
 
-    //Q 20 create another class maiBookstore that contains main method and call above clas methods in it.
+    //Q 20 create another class maiBookstore that contains main.kotlin.main method and call above clas methods in it.
     public static void main(String[] args) {
 
 //        BookStore bookStore = new BookStore();

@@ -9,7 +9,7 @@ public class Q3ArrayTest {
     //b) create method showArray to display all values of array to user.
     //c) create searchArray method to search particular record in given array using linear search .
     //d) create sortArray method that sort given array to ascending order and display after sorting.
-    //e) In main method call all above methods
+    //e) In main.kotlin.main method call all above methods
 
 
     int[] arr=new int[10];

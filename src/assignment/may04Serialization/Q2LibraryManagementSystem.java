@@ -14,7 +14,7 @@ public class Q2LibraryManagementSystem {
     //  readfromFile()
     //  searchfromFile()
     //
-    //In main design menu driven application
+    //In main.kotlin.main design menu driven application
     // 1) store data to file
     // 2) read data fom file
     // 3) search data from file
