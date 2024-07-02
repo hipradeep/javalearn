@@ -1,7 +1,5 @@
 package dacclass.june.singlylinkedlist;
 
-import assignment.jul2ArrayLinkedList.Q10ReverseLinkedList;
-
 import java.util.Scanner;
 
 public class SinglyLinkedList2 {
