@@ -2,7 +2,6 @@ package advjava._17digitalsignature;
 
 import java.security.*;
 import java.util.Scanner;
-import javax.xml.bind.DatatypeConverter;
 
 public class DigitalSignatureExample {
 
@@ -46,7 +45,7 @@ public class DigitalSignatureExample {
         KeyPair keyPair = generateRSAKeyPair();
         //function calling
         byte[] sig = createDigitalSignature(input.getBytes(), keyPair.getPrivate());
-        System.out.println("Signature Value:\n " + DatatypeConverter.printHexBinary(sig));
+        //System.out.println("Signature Value:\n " + DatatypeConverter.printHexBinary(sig));
         System.out.println("Verification: "+ verifyDigitalSignature(input.getBytes(), sig, keyPair.getPublic()));
 
     }

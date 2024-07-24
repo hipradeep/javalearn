@@ -1,6 +1,5 @@
 package practice.java42q;
 
-import kotlin.reflect.jvm.internal.impl.load.kotlin.JvmType;
 
 import java.util.Arrays;
 
